@@ -9,10 +9,8 @@ async def main():
     # Example send/receive loop
     try:
         while True:
-            await client.send("Hello, Server!")
             response = await client.receive()
             print(f"Server Response: {response}")
-            client.acknowledge()
     except KeyboardInterrupt:
         print("Stopping client...")
     finally:
